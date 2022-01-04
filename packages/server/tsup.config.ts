@@ -6,5 +6,6 @@ export default defineConfig({
 	clean: true,
 	entryPoints: ["src/index.ts", "src/http.ts"],
 	format: ["cjs", "esm"],
+	external: ["glob"],
 	dts: true,
 })
