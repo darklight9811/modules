@@ -114,7 +114,7 @@ jobs:
           build: true
           
       - name: Test
-        run: rush test
+        run: node common/scripts/install-run-rush.js test
 
   test_2:
     name: Test database packages
