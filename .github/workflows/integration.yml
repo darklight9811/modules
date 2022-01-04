@@ -104,21 +104,16 @@ jobs:
     name: Test general packages
     needs: build
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Rush Install
         uses: advancedcsg-open/actions-rush@v1.4.5
-
-      - name: Install rush
-        run: npm i -g @microsoft/rush
+        with:
+          build: true
           
       - name: Test
-        env:
-          CI: false
         run: rush test
 
   test_2:
