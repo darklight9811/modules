@@ -113,13 +113,13 @@ jobs:
       - name: Rush Install
         uses: advancedcsg-open/actions-rush@v1.4.5
 
-      - name: Install tsnodedev
-        run: npm i -g ts-node-dev
+      - name: Install rush
+        run: npm i -g @microsoft/rush
           
       - name: Test
         env:
           CI: false
-        run: node common/scripts/install-run-rush.js test
+        run: rush test
 
   test_2:
     name: Test database packages
