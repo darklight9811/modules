@@ -112,6 +112,9 @@ jobs:
 
       - name: Rush Install
         uses: advancedcsg-open/actions-rush@v1.4.5
+
+      - name: Install tsnodedev
+        run: npm i -g ts-node-dev
           
       - name: Test
         env:
