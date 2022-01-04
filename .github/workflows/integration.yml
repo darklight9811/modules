@@ -111,7 +111,10 @@ jobs:
       - name: Rush Install
         uses: advancedcsg-open/actions-rush@v1.4.5
           
-      - run: node common/scripts/install-run-rush.js test
+      - name: Test
+        env:
+          CI: false
+        run: node common/scripts/install-run-rush.js test
 
   test_2:
     name: Test database packages
